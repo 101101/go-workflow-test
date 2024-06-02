@@ -22,14 +22,14 @@ jobs:
           check-latest: true
 
           
-      # - name: Install dependencies
-      #   run: go get .
+      - name: Install dependencies
+        run: go run .
         
-      - name: Test with Go
-        run: go test -json > TestResults-${{ GITHUB.RUN.ID }}-${{ GITHUB.RUN.ATTEMPT }}.json
+      # - name: Test with Go
+      #   run: go test -json > TestResults-${{ GITHUB.RUN.ID }}-${{ GITHUB.RUN.ATTEMPT }}.json
         
-      - name: Upload Go test results
-        uses: actions/upload-artifact@v4
-        with:
-          name: Go-results-${{ GITHUB.RUN.ID }}-${{ GITHUB.RUN.ATTEMPT }}
-          path: TestResults-${{ GITHUB.RUN.ID }}-${{ GITHUB.RUN.ATTEMPT }}.json
+      # - name: Upload Go test results
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: Go-results-${{ GITHUB.RUN.ID }}-${{ GITHUB.RUN.ATTEMPT }}
+      #     path: TestResults-${{ GITHUB.RUN.ID }}-${{ GITHUB.RUN.ATTEMPT }}.json
