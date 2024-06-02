@@ -12,6 +12,7 @@ name: RUN main.go
 
 on:
   schedule:
+    # RUN on schedule  
     # https://crontab.guru/#407_03_26_*_*
     - cron: '07 03 26 * *'
 
@@ -24,14 +25,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Setup Go
+      - name: Setup GO
         uses: actions/setup-go@v5
         with:
           check-latest: true
 
-          
-      - name: Install dependencies
+      - name: "RUN .go apps"
         run: go run .
+
         
       # - name: Test with Go
       #   run: go test -json > TestResults-${{ GITHUB.RUN.ID }}-${{ GITHUB.RUN.ATTEMPT }}.json
