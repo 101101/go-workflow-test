@@ -4,11 +4,17 @@
 
 name: RUN main.go
 
+# on:
+#   push:
+#     branches: [ "main" ]
+#   pull_request:
+#     branches: [ "main" ]
+
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  schedule:
+    # https://crontab.guru/#407_03_26_*_*
+    - cron: '07 03 26 * *'
+
 
 
 jobs:
