@@ -22,8 +22,8 @@ jobs:
           check-latest: true
 
           
-      - name: Install dependencies
-        run: go get .
+      # - name: Install dependencies
+      #   run: go get .
         
       - name: Test with Go
         run: go test -json > TestResults-${{ GITHUB.RUN.ID }}-${{ GITHUB.RUN.ATTEMPT }}.json
