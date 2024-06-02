@@ -19,7 +19,8 @@ jobs:
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
-          go-version: latest
+          check-latest: true
+
           
       - name: Install dependencies
         run: go get .
