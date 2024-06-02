@@ -1,6 +1,8 @@
-# This workflow will test an un-built go app
+# This workflow will RUN an un-built go app  
+# As an example, when ran against this repo,  
+# it logs the output of "Hello World!"  
 
-name: Upload Go test results
+name: RUN main.go
 
 on:
   push:
